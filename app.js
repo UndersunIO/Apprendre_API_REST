@@ -35,7 +35,10 @@ app.get('/api/pokemons/:id', (req, res) => {
     const id = parseInt(req.params.id);
     const pokemon = pokemons.find(pokemon => pokemon.id === id)
     res.send(`Pokemon numero ${id} nommée ${pokemon.name}`)
-
+})
+// liste nombre de pokemon stocker dans une constante de tableau dans mock-pokemon.js
+app.get('/api/pokemons', (req, res) => {
+    res.send(`Il y a ${pokemons.length} pokemons`)
 })
 
 // demarre l'api REST sur le port 3000 + message de confirmation
