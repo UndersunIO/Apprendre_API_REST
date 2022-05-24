@@ -17,6 +17,9 @@ const port = 3000;
 */
 app.get('/', (req, res) => res.send('Hello  express nodemon!'))
 
+// Declaration d'un nouveau point de terminaison
+app.get('/api/pokemons/1', (req, res) => res.send('Bulbizarre'))
+
 // demarre l'api REST sur le port 3000 + message de confirmation
 app.listen(port, () => console.log(`Application node sur : http://localhost:${port} !`))
 
